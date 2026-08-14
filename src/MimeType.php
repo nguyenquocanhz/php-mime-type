@@ -200,8 +200,10 @@ final class MimeType
         // Anh: xac minh them bang getimagesize() de loai file polyglot
         // (vd GIF89a hop le + code PHP dinh kem van qua duoc finfo)
         if (isset(MimeMap::IMAGE_TYPES[$type])) {
+            // getimagesize() luon tra ve key 'mime' khi khong that bai,
+            // nen khong can ?? null o day
             $info = @getimagesize($tmp);
-            if ($info === false || ($info['mime'] ?? null) !== $type) {
+            if ($info === false || $info['mime'] !== $type) {
                 throw new MimeException('File anh hong hoac gia mao');
             }
             if ($info[0] < 1 || $info[1] < 1) {
