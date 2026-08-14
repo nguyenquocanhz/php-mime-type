@@ -1,0 +1,49 @@
+{
+    "name": "nguyenquocanhz/mime-type",
+    "description": "Xac dinh va kiem tra MIME type an toan cho PHP - chong path traversal, SVG XSS, upload gia mao",
+    "type": "library",
+    "keywords": ["mime", "mime-type", "upload", "security", "fileinfo", "file-validation"],
+    "homepage": "https://github.com/nguyenquocanhz/php-mime-type",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nguyen Quoc Anh",
+            "homepage": "https://github.com/nguyenquocanhz",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/nguyenquocanhz/php-mime-type/issues",
+        "source": "https://github.com/nguyenquocanhz/php-mime-type"
+    },
+    "require": {
+        "php": ">=8.1",
+        "ext-fileinfo": "*"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^10.5"
+    },
+    "suggest": {
+        "ext-gd": "Cho phep re-encode anh upload de loai bo payload nhung trong metadata"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gems\\Mime\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gems\\Mime\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse src --level=8"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

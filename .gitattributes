@@ -1,0 +1,9 @@
+# Khong dua cac file dev vao ban dist ma Composer tai ve
+/tests           export-ignore
+/.github         export-ignore
+/.gitattributes  export-ignore
+/.gitignore      export-ignore
+/phpunit.xml     export-ignore
+
+* text=auto eol=lf
+*.php text eol=lf
